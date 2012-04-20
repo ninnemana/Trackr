@@ -19,9 +19,12 @@
   <meta name="viewport" content="width=device-width">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="Shortcut Icon" href="favicon.ico" >
+  <link rel="apple-touch-icon.png" href="apple-touch-icon.png">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" type="text/css" href="css/tipsy.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
@@ -42,6 +45,31 @@
         <a href="/" title="Trackr Reporting" class="logo brand">
           <img src="img/logo.png" alt="Trackr Reporting" />
         </a>
+
+        <form class="navbar-form pull-left" method="get" action="/search">
+          <input type="search" name="search" class="global-search" placeholder="Search" />
+          <span class="search-input">
+            <img src="img/search.png" alt="Search" />
+          </span>
+        </form>
+
+        <ul class="nav">
+          <li>
+            <a href="#new" rel="tipsy" title="Report Issue">
+              <img src="img/plus.png" alt-"Report an Issue" />
+            </a>
+          </li>
+          <li>
+            <a href="#account" rel="tipsy" title="Account Settings">
+              <img src="img/config.png" alt="Account Settings" />
+            </a>
+          </li>
+          <li>
+            <a href="#logout" rel="tipsy" title="Logout">
+              <img src="img/sign-out.png" alt-"Sign Out" />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -81,11 +109,104 @@
             </li>
           </ul>
         </article>
+
+        <article class="module labels">
+          <ul>
+            <li>
+              <a href="#awating">
+                <span class="label" style="background-color:#fbc500">queued for feedback</span>
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#bug">
+                <span class="label">bug</span>
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#css">
+                <span class="label">css</span>
+                <span>3</span>
+              </a>
+            </li>
+            <li>
+              <a href="#html">
+                <span class="label">html</span>
+                <span>1</span>
+              </a>
+            </li>
+            <li>
+              <a href="#server">
+                <span class="label">server config</span>
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#data">
+                <span class="label">data</span>
+                <span>4</span>
+              </a>
+            </li>
+            <li>
+              <a href="#documentation">
+                <span class="label">documentation</span>
+                <span>0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#fix">
+                <span class="label">fix</span>
+                <span>0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#javascript">
+                <span class="label">javascript</span>
+                <span>0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#new-feature">
+                <span class="label">new feature</span>
+                <span>0</span>
+              </a>
+            </li>
+        </article>
       </section>
+
       <section rel="main" class="module">
 
       </section>
   </div>
+
+  <div class="clearfix"></div>
+  <footer>
+    <div class="container">
+      <img src="img/emblem.png" alt="Trackr Reporting" class="emblem" />
+      <section class="footer-links">
+        <article>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </article>
+        <article>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </article>
+        <article>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+          <a href="#">Link</a>
+        </article>
+      </section>
+      <img src="img/snail.jpg" alt="Trackr Mascot - Freddy the Snail" class="snail" />
+    </div>
+  </footer>
 
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
@@ -96,6 +217,9 @@
 
   <!-- load Twitter bootstrap library -->
   <script src="js/bootstrap.min.js"></script>
+
+  <!-- load tipsy -->
+  <script type="text/javascript" src="js/jquery.tipsy.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
   <script src="js/plugins.js"></script>
